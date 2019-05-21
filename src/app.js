@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode.js');
 const forecast = require('./utils/forecast.js');
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Define paths for Express config
 const publicDirectory = path.join(__dirname, '../public');
@@ -69,18 +70,6 @@ app.get('/weather', (req, res) => {
     });
 });
 
-app.get('/products', (req, res) => {
-    if (!req.query.search) {
-        return res.send({
-            error: 'You must provide a search term'
-        });
-    }
-
-    res.send({
-        products: []
-    });
-});
-
 app.get('/help/*', (req, res) => {
     res.render('error', {
         title: '404',
@@ -98,4 +87,4 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Server running at http://127.0.0.1:3000'));
+app.listen(port, () => console.log('Server running at http://127.0.0.1:3000'));

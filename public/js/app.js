@@ -12,7 +12,7 @@ weatherForm.addEventListener('submit', (e) => {
     messageTwo.innerHTML = '';
 
     // Here we request data from that url
-    fetch(`http://127.0.0.1:3000/weather?address=${location}`).then(response => {
+    fetch(`/weather?address=${location}`).then(response => {
         response.json().then(({ error, location, forecast }) => {
             if (error) {
                 messageOne.innerHTML = data.error;
