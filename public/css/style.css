@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 500px;
+    min-height: 100vh;
+    color: #333;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex-grow: 1;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+main {
+    flex-grow: 2;
+}
+
+header a {
+    color: rgb(22, 86, 204);
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    border-top: 2px solid rgb(184, 180, 180);
+    margin-top: 20px;
+    width: 100%;
+    color: #888;
+    height: 15vh;
+    min-height: 60px;
+    text-align: center;
+    padding-top: 5%;
+    flex-grow: .2;
+}
+
+.eater {
+    width: 10vw;
+}
+
+#messageOne {
+    margin-bottom: 15px;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888;
+    background: #888;
+    color: #fff;
+    padding: 8px;
+    border-radius: 3px;
+}
