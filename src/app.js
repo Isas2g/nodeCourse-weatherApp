@@ -20,6 +20,7 @@ hbs.registerPartials(partialsPath);
 
 // Setup static directory to serve
 app.use(express.static(publicDirectory));
+// Comments are really important for code understanding
 
 // Main page route
 app.get('', (req, res) => {
